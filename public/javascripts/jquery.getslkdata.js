@@ -8,8 +8,9 @@
   $.fn.getSlkData = function( options ) {  
 
     var settings = {
-      'site' : 'slkdemos',
-      'slug' : 'example'
+      'server' : 'ajax.slkdesign.net',
+      'site'   : 'slkdemos',
+      'slug'   : 'example'
     };
 
     return this.each(function() {        
@@ -18,9 +19,8 @@
         $.extend( settings, options );
       }
       var modal_container = $(this);
-      var url = 'http://ajax.dev/pages/'+settings['site']+'/'+settings['slug']+'.jsonp?callback=?'
+      var url = 'http://'+settings['server']+'/pages/'+settings['site']+'/'+settings['slug']+'.jsonp?callback=?'
       jQuery.getJSON(url, function(data) {
-        console.log(data);
         modal_container.html(data);
       });
     });

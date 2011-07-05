@@ -6,6 +6,9 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'rack-jsonp-middleware'
+gem 'high_voltage', '>= 1.0'
+gem 'json'
 
 # Use unicorn as the web server
 # gem 'unicorn'
